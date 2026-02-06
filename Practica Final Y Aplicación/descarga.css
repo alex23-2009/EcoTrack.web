@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0fdf4;
+    color: #14532d;
+  }
+  
+  .descarga {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #d1fae5, #ffffff);
+    text-align: center;
+  }
+  
+  .descarga-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .descarga h1 {
+    font-size: 2.5rem;
+    color: #065f46;
+    margin-bottom: 20px;
+  }
+  
+  .descarga p {
+    font-size: 1.2rem;
+    color: #064e3b;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .botones-descarga {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .btn-descarga {
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #10b981;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-descarga:hover {
+    background-color: #065f46;
+  }
+  
+  .btn-descarga.android {
+    background-color: #34b7f1;
+  }
+  
+  .btn-descarga.ios {
+    background-color: #3b97f3;
+  }
+  
+  .btn-descarga.windows {
+    background-color: #0078d4;
+  }
+  
+  .imagen-app {
+    margin-top: 40px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .botones-descarga {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .imagen-app {
+      max-width: 100%;
+    }
+  }
+  

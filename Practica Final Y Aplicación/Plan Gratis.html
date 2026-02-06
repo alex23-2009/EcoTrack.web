@@ -1,0 +1,81 @@
+<!-- Planes -->
+<section class="planes">
+  <!-- Plan Básico -->
+  <div class="card-plan">
+    <h3>Plan Básico</h3>
+    <p>Gratis</p>
+    <ul>
+      <li>✔ Monitoreo de consumo básico</li>
+      <li>✔ 1 dispositivo conectado</li>
+      <li>✔ Notificaciones mensuales</li>
+    </ul>
+    <button onclick="abrirModal('modal-basico')">Seleccionar</button>
+  </div>
+
+  <!-- Plan Hogar -->
+  <div class="card-plan">
+    <h3>Plan Hogar</h3>
+    <p>RD$399/mes</p>
+    <ul>
+      <li>✔ Automatización de consumo</li>
+      <li>✔ Hasta 5 dispositivos</li>
+      <li>✔ Reportes semanales</li>
+    </ul>
+    <button onclick="abrirModal('modal-hogar')">Seleccionar</button>
+  </div>
+
+  <!-- Plan Pro -->
+  <div class="card-plan">
+    <h3>Plan Pro</h3>
+    <p>RD$749/mes</p>
+    <ul>
+      <li>✔ Soporte 24/7</li>
+      <li>✔ Dispositivos ilimitados</li>
+      <li>✔ Control remoto avanzado</li>
+    </ul>
+    <button onclick="abrirModal('modal-pro')">Seleccionar</button>
+  </div>
+</section>
+
+<!-- Modales -->
+<div id="modal-basico" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal('modal-basico')">&times;</span>
+    <h2>Plan Básico</h2>
+    <p>Ideal para usuarios que desean comenzar a monitorear su consumo.</p>
+    <ul>
+      <li>✔ Monitoreo de consumo básico</li>
+      <li>✔ 1 dispositivo conectado</li>
+      <li>✔ Notificaciones mensuales</li>
+    </ul>
+    <button class="confirmar">Confirmar este plan</button>
+  </div>
+</div>
+
+<div id="modal-hogar" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal('modal-hogar')">&times;</span>
+    <h2>Plan Hogar</h2>
+    <p>Perfecto para familias que quieren automatizar y optimizar recursos.</p>
+    <ul>
+      <li>✔ Automatización de consumo</li>
+      <li>✔ Hasta 5 dispositivos conectados</li>
+      <li>✔ Reportes semanales</li>
+    </ul>
+    <button class="confirmar">Confirmar este plan</button>
+  </div>
+</div>
+
+<div id="modal-pro" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal('modal-pro')">&times;</span>
+    <h2>Plan Pro</h2>
+    <p>Diseñado para usuarios avanzados con múltiples dispositivos.</p>
+    <ul>
+      <li>✔ Soporte completo 24/7</li>
+      <li>✔ Dispositivos ilimitados</li>
+      <li>✔ Control remoto avanzado</li>
+    </ul>
+    <button class="confirmar">Confirmar este plan</button>
+  </div>
+</div>

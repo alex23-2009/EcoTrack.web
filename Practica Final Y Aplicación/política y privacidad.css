@@ -1,0 +1,226 @@
+/* El Mejor CSS del Mundo para la Política de Privacidad de EcoTrack - Colores Representativos - ¡Caja Más Grande! */
+body {
+    font-family: 'Inter', 'Nunito Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(140deg, #e6ffe6 0%, #ccffcc 60%, #aaffaa 100%); /* Degradado de verdes suaves */
+    color: #386641; /* Tono de verde oscuro para el texto principal */
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.politica-privacidad-contenido {
+    max-width: 1200px; /* Aumento del ancho máximo */
+    margin: 60px auto; /* Reducción del margen superior e inferior para compensar si es necesario */
+    padding: 60px;
+    background-color: #f0fff0; /* Un verde muy claro para el fondo del contenido */
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(46, 204, 113, 0.18); /* Sombra verde suave */
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #c2f0c2; /* Borde sutil verde claro */
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.politica-privacidad-contenido::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: rgba(240, 255, 240, 0.7); /* Capa verde translúcida */
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+.politica-privacidad-contenido h1,
+.politica-privacidad-contenido h2 {
+    color: #2ecc71; /* Verde primario vibrante */
+    margin-bottom: 35px;
+    border-bottom: 5px solid #a7e9a7; /* Línea inferior verde más clara */
+    padding-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.2;
+}
+
+.politica-privacidad-contenido h1 {
+    font-size: 3.5em;
+    text-align: center;
+    margin-top: 0;
+    text-shadow: 2px 2px 4px rgba(46, 204, 113, 0.08); /* Sombra verde suave */
+}
+
+.politica-privacidad-contenido h2 {
+    font-size: 2.5em;
+    margin-top: 60px;
+    font-weight: 700;
+    color: #386641; /* Tono de verde oscuro para los sub-títulos */
+}
+
+.politica-privacidad-contenido p {
+    margin-bottom: 30px;
+    font-size: 1.15em;
+    color: #4a7c59; /* Otro tono de verde legible */
+    text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.01);
+}
+
+.politica-privacidad-contenido ul {
+    margin-bottom: 35px;
+    padding-left: 40px;
+    list-style-type: none;
+}
+
+.politica-privacidad-contenido li {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #4a7c59;
+    position: relative;
+    padding-left: 25px;
+}
+
+.politica-privacidad-contenido li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2ecc71;
+    font-size: 1.4em;
+    line-height: 1.9;
+}
+
+.politica-privacidad-contenido strong {
+    font-weight: 700;
+    color: #2e6142; /* Un verde más intenso para resaltar */
+}
+
+.politica-privacidad-contenido .contacto p {
+    font-weight: 600;
+    color: #2e6142;
+}
+
+.politica-privacidad-contenido a {
+    color: #00a36c; /* Tono de verde para enlaces */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.politica-privacidad-contenido a:hover {
+    color: #00754a; /* Tono de verde más oscuro al pasar el ratón */
+    border-bottom-color: #00754a;
+}
+
+.politica-privacidad-contenido .introduccion p:first-of-type {
+    color: #558b2f; /* Un verde oliva para la fecha */
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1em;
+}
+
+.politica-privacidad-contenido section {
+    margin-bottom: 60px;
+}
+
+.politica-privacidad-contenido section:last-child {
+    margin-bottom: 0;
+}
+
+main.politica-privacidad-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.politica-privacidad-contenido h1:hover,
+.politica-privacidad-contenido h2:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+}
+
+.politica-privacidad-contenido a:focus,
+.politica-privacidad-contenido a:active {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 163, 108, 0.5); /* Sombra verde al enfocar */
+}
+
+@media (max-width: 1200px) {
+    .politica-privacidad-contenido {
+        max-width: 95%; /* Un poco más ancho en pantallas grandes */
+        margin: 40px auto; /* Reducción de márgenes en pantallas grandes */
+        padding: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .politica-privacidad-contenido {
+        max-width: 98%; /* Ocupar casi todo el ancho en tablets */
+        margin: 30px auto;
+        padding: 40px;
+    }
+
+    .politica-privacidad-contenido h1 {
+        font-size: 3em;
+    }
+
+    .politica-privacidad-contenido h2 {
+        font-size: 2em;
+    }
+
+    .politica-privacidad-contenido p,
+    .politica-privacidad-contenido li {
+        font-size: 1.05em;
+    }
+}
+
+@media (max-width: 768px) {
+    .politica-privacidad-contenido {
+        margin: 20px 10px; /* Márgenes más pequeños en móviles */
+        padding: 25px;
+        border-radius: 12px;
+    }
+
+    .politica-privacidad-contenido h1 {
+        font-size: 2.5em;
+    }
+
+    .politica-privacidad-contenido h2 {
+        font-size: 1.8em;
+    }
+
+    .politica-privacidad-contenido p,
+    .politica-privacidad-contenido li {
+        font-size: 1em;
+    }
+
+    .politica-privacidad-contenido ul {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .politica-privacidad-contenido h1 {
+        font-size: 2em;
+    }
+
+    .politica-privacidad-contenido h2 {
+        font-size: 1.6em;
+    }
+}

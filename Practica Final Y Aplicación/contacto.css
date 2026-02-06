@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0fdf4;
+    color: #14532d;
+  }
+  
+  .contacto {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #d1fae5, #ffffff);
+  }
+  
+  .contacto-contenido {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contacto-contenido h2 {
+    font-size: 2rem;
+    color: #065f46;
+    margin-bottom: 10px;
+  }
+  
+  .contacto-contenido p {
+    font-size: 1.1rem;
+    color: #064e3b;
+    margin-bottom: 40px;
+  }
+  
+  .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    padding: 12px;
+    border: 1px solid #a7f3d0;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #ffffff;
+    transition: border-color 0.3s;
+  }
+  
+  .formulario-contacto input:focus,
+  .formulario-contacto textarea:focus {
+    border-color: #10b981;
+  }
+  
+  .formulario-contacto button {
+    padding: 12px;
+    background-color: #10b981;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .formulario-contacto button:hover {
+    background-color: #059669;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .contacto-contenido {
+      padding: 0 10px;
+    }
+  
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+      font-size: 0.95rem;
+    }
+  }
+  
+
+
+
+
+  /* Animación de entrada suave para todo el contenido */
+.contacto-contenido {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animación al pasar el mouse sobre los inputs y textareas */
+.formulario-contacto input:hover,
+.formulario-contacto textarea:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Botón animado al pasar el mouse */
+.formulario-contacto button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.formulario-contacto button:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

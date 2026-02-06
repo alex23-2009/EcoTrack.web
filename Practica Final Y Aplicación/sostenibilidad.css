@@ -1,0 +1,431 @@
+
+
+/* Estilos generales para el cuerpo de la página de sostenibilidad */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7fbf7; /* Fondo verde muy suave */
+  color: #333;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Estilos para el contenedor principal */
+.contenedor-principal-sostenibilidad {
+  padding: 50px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Animación de aparición suave */
+@keyframes aparecer {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animación de entrada desde la izquierda */
+@keyframes entradaIzquierda {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Animación de entrada desde arriba */
+@keyframes entradaArriba {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animación de despliegue */
+@keyframes despliegue {
+  from {
+      opacity: 0;
+      transform: translateY(-5px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animación de entrada con fundido */
+@keyframes entradaFade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Estilos para la sección de héroe */
+.hero-sostenibilidad {
+  background-color: #e6f4e9; /* Verde claro para el fondo del héroe */
+  padding: 70px 30px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 30px; /* Reduciendo el margen inferior */
+  animation: aparecer 0.8s ease-out;
+}
+
+.hero-contenido {
+  text-align: left;
+}
+
+.hero-contenido h1 {
+  color: #2e8b57; /* Verde principal más intenso */
+  font-size: 3.0em;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  animation: entradaFade 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.hero-contenido .subtitulo {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  animation: entradaFade 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: aparecer 0.8s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.boton-principal {
+  background-color: #2e8b57;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.boton-principal:hover {
+  background-color: #1e643d;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.boton-secundario {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.boton-secundario:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero-imagen {
+  text-align: center;
+  animation: aparecer 0.8s ease-out 0.7s forwards;
+  opacity: 0;
+}
+
+.hero-imagen img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px; /* Ligeramente redondeada */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilos para la sección de introducción */
+.introduccion-seccion {
+  padding: 30px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: aparecer 0.6s ease-out;
+}
+
+.introduccion-seccion h2 {
+  color: #388e3c;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  animation: entradaFade 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.introduccion-seccion p {
+  color: #555;
+  font-size: 1.1em;
+  line-height: 1.7;
+  animation: entradaFade 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* Estilos para las secciones desplegables */
+.desplegable-oculto {
+  margin-bottom: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  padding: 30px;
+  overflow: hidden; /* Para que la animación de despliegue funcione bien */
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.desplegable-oculto.desplegado {
+  max-height: 1000px; /* Un valor alto para asegurar que se muestre todo el contenido */
+  opacity: 1;
+}
+
+/* Estilos para la sección de compromiso (REORGANIZADO) */
+.seccion-compromiso h2 {
+  color: #2e8b57;
+  font-size: 2.6em;
+  margin-bottom: 30px;
+  text-align: left;
+  position: relative;
+  padding-left: 0; /* Ajustado para quitar el espacio del icono */
+  animation: aparecer 0.6s ease-out;
+}
+
+/* Eliminamos el ::before para quitar el icono */
+
+.seccion-compromiso p {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 35px;
+  line-height: 1.8;
+  text-align: left;
+  animation: entradaFade 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.compromisos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.compromiso-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  text-align: left;
+  border-left: 6px solid #388e3c;
+  transition: transform 0.3s ease-in-out;
+  display: flex; /* Usando flexbox para alinear icono y contenido */
+  align-items: flex-start; /* Alineando los ítems al inicio (verticalmente) */
+  gap: 15px; /* Espacio entre el icono y el contenido */
+  opacity: 0;
+  transform: translateX(-20px);
+  animation-fill-mode: forwards;
+}
+
+.compromiso-item:hover {
+  transform: translateY(-3px);
+}
+
+.compromiso-item i.icono {
+  font-size: 2.0em; /* Tamaño del icono */
+  color: #81c784;
+  animation: entradaFade 0.6s ease-out 0.4s forwards;
+}
+
+.compromiso-contenido {
+  flex-grow: 1; /* El contenido ocupa el espacio restante */
+  opacity: 0;
+  animation: entradaFade 0.6s ease-out 0.6s forwards;
+}
+
+.compromiso-contenido strong {
+  color: #2e8b57;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.compromiso-contenido span {
+  color: #666;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.animacion-entrada-izquierda {
+  animation-name: entradaIzquierda;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.animacion-entrada-fade {
+  animation-name: entradaFade;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.delay-05 { animation-delay: 0.1s; }
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1.0s; }
+.delay-6 { animation-delay: 1.2s; }
+
+/* Estilos para la sección de acciones sostenibles */
+.seccion-acciones h2 {
+  color: #388e3c;
+  font-size: 2.4em;
+  margin-bottom: 35px;
+  text-align: center;
+  animation: aparecer 0.6s ease-out;
+}
+
+.acciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.accion {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: left; /* Texto alineado a la izquierda en las tarjetas */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-name: entradaArriba;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.accion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.accion i.icono {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #43a047; /* Tono de verde más oscuro */
+  opacity: 0;
+  animation: entradaFade 0.6s ease-out 0.3s forwards;
+}
+
+/* Puedes añadir estilos específicos para cada icono si es necesario */
+.icono-agua { color: #6dd5ed; }
+.icono-gas { color: #ff6f61; }
+.icono-luz { color: #fdd835; }
+.icono-reporte { color: #1e88e5; }
+.icono-comunidad { color: #fbc02d; }
+.icono-educacion { color: #7b1fa2; }
+.icono-colaborar {
+  font-size: 2.0em;
+  color: #fbc02d; /* Un color diferente para distinguirlo */
+}
+
+.accion h3 {
+  color: #43a047;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  opacity: 0;
+  animation: entradaFade 0.6s ease-out 0.5s forwards;
+}
+
+.accion p {
+  color: #666;
+  font-size: 1.0em;
+  line-height: 1.6;
+  opacity: 0;
+  animation: entradaFade 0.6s ease-out 0.7s forwards;
+}
+
+/* Estilos para la sección de llamada a la acción */
+.seccion-llamada-accion {
+  background-color: #f0f8f4; /* Otro tono suave de verde */
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 60px;
+  animation: aparecer 0.8s ease-out;
+}
+
+.seccion-llamada-accion h2 {
+  color: #2e8b57;
+  font-size: 2.6em;
+  margin-bottom: 30px;
+  animation: entradaFade 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.seccion-llamada-accion p {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  animation: entradaFade 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.seccion-llamada-accion .boton-principal.grande {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  margin-right: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: entradaFade 0.6s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.seccion-llamada-accion .boton-principal.grande:hover {
+  background-color: #1e643d;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.seccion-llamada-accion .boton-secundario.grande {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: entradaFade 0.6s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+.seccion-llamada-accion .boton-secundario.grande:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

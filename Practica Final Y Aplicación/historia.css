@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+                rgba(0, 0, 0, 0.719), 
+                rgba(0, 0, 0, 0.829)
+              ),
+              url('imagenes/fondo de nosotros.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  animation: aparecerBody 1.5s ease forwards;
+}
+
+
+
+.contenedor-historia {
+  max-width: 1200px; /* Más ancho como el otro */
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  animation: aparecerCaja 1.8s ease forwards;
+}
+
+
+
+.historia h2 {
+  font-size: 3.5rem; /* Mismo tamaño que h1 y h2 del otro */
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ffffffe3;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  animation: fadeInDown 1s ease forwards;
+}
+
+
+
+.historia p {
+  font-size: 1.5rem; /* Ahora mismo tamaño que el otro */
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #ffffe3;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1.5s ease forwards;
+}

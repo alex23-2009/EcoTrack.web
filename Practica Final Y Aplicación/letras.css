@@ -1,0 +1,19 @@
+/* estilos para la tipografía general */
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* estilos para la sección de "Cómo funciona" */
+  .funciona {
+    font-family: "https://fonts.google.com/specimen/PT+Serif?categoryFilters=Serif:%2FSerif%2FTransitional", serif;
+  }
+  
+  .intro h1 {
+    font-weight: bold;
+  }
+  
+  .paso h2 {
+    font-weight: bold;
+  }
+  
+  /* ... cualquier otro estilo de tipografía que tengas ... */

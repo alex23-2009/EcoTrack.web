@@ -1,0 +1,449 @@
+/* Estilos para la sección de "Cómo funciona" */
+.funciona {
+  padding: 80px 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  background-color: #ffffff00;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.212);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.intro h1 {
+  color: #4fb154;
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.intro p {
+  color: #ffffff;
+  font-size: 1.15em;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.paso {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.452);
+}
+
+.paso h2 {
+  color: #343a40;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.paso p {
+  color: #6c757d;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* --- Responsive para la sección de pasos --- */
+@media (max-width: 768px) {
+  .pasos {
+    grid-template-columns: 1fr; /* Apilar los pasos en pantallas más pequeñas */
+    padding: 0 10px;
+  }
+
+  .paso {
+    padding: 20px;
+  }
+
+  .intro {
+    margin-bottom: 40px;
+  }
+
+  .intro h1 {
+    font-size: 2.4em;
+  }
+
+  .intro p {
+    font-size: 1.1em;
+  }
+
+  .funciona {
+    padding: 60px 20px;
+    margin: 40px auto;
+  }
+}
+body {
+  background: linear-gradient(rgba(3, 44, 16, 0.479), rgba(0, 0, 0, 0.74)),
+              url('imagenes/casa verde mas bonito.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+  
+
+/* --- Opciones Adicionales --- */
+
+/* Para hacer los tamaños de fuente responsivos (se ajustan al tamaño de la pantalla) */
+/* Puedes usar unidades relativas como vw (viewport width) */
+/*
+h1 {
+  font-size: 5vw; /* 5% del ancho de la ventana del navegador */
+
+
+h2 {
+  font-size: 4vw;
+}
+
+p {
+  font-size: 2.5vw;
+}
+
+/* También puedes usar media queries para ajustar los tamaños en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em; /* Tamaño más grande en pantallas pequeñas */
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+}
+
+/* Para modificar la tipografía (si ya tienes fuentes importadas o fuentes del sistema) */
+/*
+h1, h2 {
+  font-family: 'Baskerville', serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+*//* --- Estilos para la sección de "Cómo funciona" con letras más grandes y animaciones --- */
+.funciona {
+  padding: 80px 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo ligeramente transparente */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  opacity: 0; /* Inicialmente invisible para la animación de entrada */
+  transform: translateY(30px); /* Inicialmente un poco abajo */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.funciona.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.intro h1 {
+  color: #7eee83;
+  font-size: 3.5em; /* Letra del título más grande */
+  margin-bottom: 25px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInSlideDown 0.8s ease-out 0.2s forwards;
+}
+
+.intro p {
+  color: #ffffff;
+  font-size: 1.3em; /* Letra del párrafo de introducción más grande */
+  line-height: 2;
+  margin: 0 auto;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.8s ease-out 0.4s forwards;
+}
+
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Pasos un poco más anchos */
+  gap: 50px;
+  padding: 0 40px;
+}
+
+.paso {
+  background-color: rgb(255, 255, 255); /* Fondo más transparente */
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease-in-out;
+  opacity: 0.8; /* Ligeramente transparente inicialmente */
+}
+
+.paso:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.paso h2 {
+  color: #003115; /* Letras de los títulos de los pasos en blanco */
+  font-size: 2em; /* Letra de los subtítulos de los pasos más grande */
+  margin-bottom: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScaleUp 0.6s ease-out forwards;
+}
+
+.paso p {
+  color: #000000; /* Letras de los párrafos de los pasos en un gris claro */
+  font-size: 1.2em; /* Letra de los párrafos de los pasos más grande */
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInSlideUp 0.6s ease-out 0.2s forwards;
+}
+
+/* --- Animaciones de entrada --- */
+@keyframes fadeInSlideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScaleUp {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Responsive para la sección de pasos (con letras más grandes) --- */
+@media (max-width: 768px) {
+  .pasos {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .paso {
+    padding: 30px;
+  }
+
+  .intro {
+    margin-bottom: 50px;
+  }
+
+  .intro h1 {
+    font-size: 3em;
+  }
+
+  .intro p {
+    font-size: 1.2em;
+    line-height: 1.8;
+  }
+
+  .paso h2 {
+    font-size: 1.8em;
+  }
+
+  .paso p {
+    font-size: 1.1em;
+    line-height: 1.7;
+  }
+
+  .funciona {
+    padding: 60px 20px;
+    margin: 40px auto;
+  }
+}
+
+/* --- Estilo para que la sección aparezca al hacer scroll --- */
+.funciona {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.funciona.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+/* Estilos para la sección de "Cómo funciona" */
+.funciona {
+  padding: 80px 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo ligeramente transparente */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  opacity: 0; /* Inicialmente invisible para la animación de entrada */
+  transform: translateY(30px); /* Inicialmente un poco abajo */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.funciona.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.intro h1 {
+  color: #7eee83;
+  font-size: 3.5em; /* Letra del título más grande */
+  margin-bottom: 25px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInSlideDown 0.8s ease-out 0.2s forwards;
+}
+
+.intro p {
+  color: #ffffff;
+  font-size: 1.3em; /* Letra del párrafo de introducción más grande */
+  line-height: 2;
+  margin: 0 auto;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.8s ease-out 0.4s forwards;
+}
+
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Pasos un poco más anchos */
+  gap: 50px;
+  padding: 0 40px;
+}
+
+.paso {
+  background-color: rgb(255, 255, 255); /* Fondo más transparente */
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Animaciones más rápidas */
+}
+
+.paso:hover {
+  transform: translateY(-5px); /* Menos elevación al hacer hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+}
+
+.paso h2 {
+  color: #000000; /* Letras de los títulos de los pasos en blanco */
+  font-size: 2em; /* Letra de los subtítulos de los pasos más grande */
+  margin-bottom: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transform: scale(0.95); /* Inicio ligeramente más pequeño */
+  animation: fadeInScaleUp 0.5s ease-out forwards;
+}
+
+.paso p {
+  color: #000000; /* Letras de los párrafos de los pasos en un gris claro */
+  font-size: 1.2em; /* Letra de los párrafos de los pasos más grande */
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(10px); /* Inicio ligeramente abajo */
+  animation: fadeInSlideUp 0.5s ease-out 0.2s forwards;
+}
+
+/* --- Animaciones de entrada --- */
+@keyframes fadeInSlideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Responsive para la sección de pasos (con letras más grandes) --- */
+@media (max-width: 768px) {
+  .pasos {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+      gap: 40px;
+  }
+
+  .paso {
+      padding: 30px;
+  }
+
+  .intro {
+      margin-bottom: 50px;
+  }
+
+  .intro h1 {
+      font-size: 3em;
+  }
+
+  .intro p {
+      font-size: 1.2em;
+      line-height: 1.8;
+  }
+
+  .paso h2 {
+      font-size: 1.8em;
+  }
+
+  .paso p {
+      font-size: 1.1em;
+      line-height: 1.7;
+  }
+
+  .funciona {
+      padding: 60px 20px;
+      margin: 40px auto;
+  }
+}
+
+/* --- Estilo para que la sección aparezca al hacer scroll (NECESITA JAVASCRIPT) --- */
+/*
+.funciona {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.funciona.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+*/

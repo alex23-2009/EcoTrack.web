@@ -1,0 +1,407 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.contenedor-principal-comodidad {
+  padding: 90px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section - Animaciones de carga inicial */
+.hero-comodidad {
+  background: linear-gradient(135deg, #e0f7fa 0%, #c8e6c9 100%);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  padding: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-contenido {
+  text-align: left;
+}
+
+.hero-contenido h1 {
+  color: #2e7d32;
+  font-size: 3.6em;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInSlideDown 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s forwards;
+}
+
+.hero-contenido p {
+  color: #495057;
+  font-size: 1.25em;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s forwards;
+}
+
+.cta-botones {
+  display: flex;
+  gap: 20px;
+}
+
+.boton-descargar,
+.boton-ver-mas {
+  background-color: #2e7d32;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.boton-descargar {
+  animation: fadeInSlideRight 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s forwards;
+}
+
+.boton-ver-mas {
+  background-color: transparent;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+  animation: fadeInSlideLeft 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1s forwards;
+}
+
+.boton-descargar:hover,
+.boton-ver-mas:hover {
+  background-color: #1b5e20;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-imagen {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInSlideLeftImage 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s forwards;
+}
+
+.hero-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-imagen img:hover {
+  transform: scale(1.03);
+}
+
+/* Secciones - Estilos iniciales para la animación al scroll */
+.seccion-vision,
+.seccion-caracteristicas,
+.seccion-beneficios,
+.seccion-cta {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.seccion-vision.aparecer,
+.seccion-caracteristicas.aparecer,
+.seccion-beneficios.aparecer,
+.seccion-cta.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Sección de Visión - Estilos */
+.seccion-vision {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 60px;
+  padding: 70px;
+}
+
+.seccion-vision h2 {
+  color: #2e7d32;
+  font-size: 2.8em;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.seccion-vision p {
+  color: #495057;
+  font-size: 1.15em;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* Características Section - Estilos */
+.seccion-caracteristicas {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.caracteristicas-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+  padding: 0 40px;
+}
+
+.caracteristica {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caracteristica:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.icono {
+  font-size: 3em;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.caracteristica h3 {
+  color: #343a40;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.caracteristica p {
+  color: #6c757d;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Beneficios Section - Estilos */
+.seccion-beneficios {
+  padding: 80px 0;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 60px;
+  margin-top: 60px;
+}
+
+.beneficios-lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.beneficios-lista li {
+  color: #495057;
+  font-size: 1.15em;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.beneficios-lista li i {
+  color: #2e7d32;
+  font-size: 1.2em;
+  min-width: 24px;
+  text-align: center;
+}
+
+.beneficios-lista li:last-child {
+  border-bottom: none;
+}
+
+/* CTA Section (Cuadro Grande Inferior) - Estilos */
+.seccion-cta {
+  background: linear-gradient(135deg, #8bc34a 0%, #689f38 100%);
+  color: #fff;
+  text-align: center;
+  padding: 100px 40px;
+  border-radius: 16px;
+  margin-top: 80px;
+  box-shadow: 0 12px 30px rgba(102, 187, 106, 0.3);
+}
+
+.seccion-cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(102, 187, 106, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.seccion-cta h2 {
+  font-size: 3.4em;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.seccion-cta p {
+  font-size: 1.3em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.seccion-cta .boton-descargar {
+  background-color: #fff;
+  color: #689f38;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 20px rgba(102, 187, 106, 0.4);
+}
+
+/* --- ANIMACIONES DE ENTRADA (CARGA INICIAL) --- */
+
+@keyframes fadeInSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInSlideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInSlideLeftImage {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .hero-comodidad {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .hero-contenido {
+    text-align: center;
+  }
+
+  .hero-contenido h1 {
+    font-size: 2.8em;
+  }
+
+  .hero-contenido p {
+    font-size: 1.1em;
+  }
+
+  .cta-botones {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hero-imagen {
+    order: -1;
+    /* Imagen encima en móvil */
+  }
+
+  .caracteristicas-lista {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .seccion-beneficios {
+    padding: 30px;
+  }
+
+  .seccion-beneficios .beneficios-lista li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .seccion-beneficios .beneficios-lista li i {
+    margin-right: 0;
+  }
+
+  .seccion-cta {
+    padding: 60px 30px;
+  }
+
+  .seccion-cta h2 {
+    font-size: 2.4em;
+  }
+
+  .seccion-cta p {
+    font-size: 1.1em;
+  }
+
+  .contenedor-principal-comodidad {
+    padding: 60px 20px;
+  }
+}
+.fa-remote-control::before {
+  content: "\f10b"; /* Código Unicode para el icono de control remoto en Font Awesome 5 (podría ser diferente en la versión 6) */
+  font-family: 'Font Awesome 5 Free'; /* O 'Font Awesome 6 Free', 'Font Awesome 6 Solid', dependiendo de tu configuración */
+  font-weight: 900; /* Para iconos sólidos */
+  font-style: normal;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Si estás usando Font Awesome 6, podrías probar con: */
+/*
+.fa-remote-control::before {
+  content: "\f10b";
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*/

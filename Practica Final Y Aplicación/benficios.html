@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTrack</title>
+
+  <link rel="stylesheet" href="barra de navegacion.css">
+  <link rel="stylesheet" href="pie.css">
+  <link rel="stylesheet" href="beneficios.css">
+</head>
+<body>
+  <body>
+    <header class="navbar">
+        <div class="logo">EcoTrack</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                    <ul class="submenu">
+                        <li><a href="historia.html">Historia</a></li>
+                        </ul>
+                </li>
+                <li><a href="como funciona.html">¿Cómo Funciona?</a></li>
+                <li>
+                    <a href="benficios.html">Beneficios</a>
+                    <ul class="submenu">
+                        <li><a href="ahorro.html">Ahorro</a></li>
+                        <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                        <li><a href="comodidad.html">Comodidad</a></li>
+                    </ul>
+                </li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+
+  <section class="seccion-beneficios-principal">
+    <h2 class="titulo-beneficios">Descubre los Beneficios de EcoTrack</h2>
+    <p class="subtitulo-beneficios">Elige cómo EcoTrack mejora tu vida y el planeta.</p>
+    <div class="contenedor-beneficios">
+        <div class="beneficio-card">
+            <i class="fas fa-piggy-bank icono-beneficio"></i>
+            <h3>Ahorro Inteligente</h3>
+            <p>Reduce significativamente tus gastos en agua, luz y gas con nuestro análisis y control avanzado.</p>
+            <a href="ahorro.html" class="boton-beneficio">Ver más sobre Ahorro</a>
+        </div>
+        <div class="beneficio-card">
+            <i class="fas fa-home icono-beneficio"></i>
+            <h3>Máxima Comodidad</h3>
+            <p>Gestiona todos los aspectos de tu hogar inteligente desde una única aplicación intuitiva y fácil de usar.</p>
+            <a href="comodidad.html" class="boton-beneficio">Ver más sobre Comodidad</a>
+        </div>
+        <div class="beneficio-card">
+            <i class="fas fa-leaf icono-beneficio"></i>
+            <h3>Sostenibilidad Activa</h3>
+            <p>Contribuye al cuidado del medio ambiente optimizando tu consumo de recursos de manera eficiente.</p>
+            <a href="sostenibilidad.html" class="boton-beneficio">Ver más sobre Sostenibilidad</a>
+        </div>
+    </div>
+</section>
+<script>function checkVisibility() {
+  // ... tu código JavaScript existente para otras secciones ...
+
+  const beneficiosSection = document.querySelector('.seccion-beneficios-principal');
+  if (beneficiosSection) {
+    const rect = beneficiosSection.getBoundingClientRect();
+    const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight * 0.8) || (rect.bottom >= 0 && rect.top <= window.innerHeight * 0.8);
+    if (isVisible) {
+      beneficiosSection.classList.add('aparecer');
+    } else {
+      beneficiosSection.classList.remove('aparecer');
+    }
+  }
+}
+
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('resize', checkVisibility);
+window.addEventListener('load', checkVisibility);</script>
+
+
+<footer class="footer">
+  <div class="footer-contenido">
+      <div class="footer-info">
+          <h3>EcoTrack</h3>
+          <p>&copy; 2025 EcoTrack. Todos los derechos reservados.</p>
+          <p>EcoTrack te ayuda a controlar y optimizar el consumo de tus recursos domésticos, ¡ahorra y vive más sostenible!</p>
+          <p class="proyecto-escolar"><i class="fas fa-graduation-cap"></i> Proyecto Escolar</p>
+      </div>
+      <div class="footer-contacto">
+          <h3>Contacto</h3>
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:contacto@ecotrack.com" class="footer-enlace">contacto@ecotrack.com</a></p>
+          <p><i class="fas fa-phone"></i> Teléfono: +1 (849) 405-8098</p>
+          <p><i class="fas fa-map-marker-alt"></i> Dirección: Barahona, República Dominicana</p>
+      </div>
+      <div class="footer-social">
+          <h3>Síguenos</h3>
+          <ul>
+              <li><a href="https://www.facebook.com/EcoTrack" class="footer-enlace" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+              <li><a href="https://twitter.com/EcoTrack" class="footer-enlace" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li><a href="https://www.instagram.com/EcoTrack" class="footer-enlace" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          </ul>
+      </div>
+      <div class="footer-legal">
+          <h3>Legal</h3>
+          <ul>
+              <li><a href="terminos.html" class="footer-enlace">Términos y Condiciones</a></li>
+              <li><a href="privacidad.html" class="footer-enlace">Política de Privacidad</a></li>
+              <li><a href="cookies.html" class="footer-enlace">Política de Cookies</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>

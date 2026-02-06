@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTrack</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="barra de navegacion.css">
+  <link rel="stylesheet" href="pie.css">
+  <link rel="stylesheet" href="navegacion.css">
+</head>
+<body>
+  <body>
+    <header class="navbar">
+        <div class="logo">EcoTrack</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                    <ul class="submenu">
+                        <li><a href="historia.html">Historia</a></li>
+                        </ul>
+                </li>
+                <li><a href="como funciona.html">¿Cómo Funciona?</a></li>
+                <li>
+                    <a href="benficios.html">Beneficios</a>
+                    <ul class="submenu">
+                        <li><a href="ahorro.html">Ahorro</a></li>
+                        <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                        <li><a href="comodidad.html">Comodidad</a></li>
+                    </ul>
+                </li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="contacto.html">Contactos</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+
+
+  <section class="banner" id="inicio">
+    <div class="contenido">
+      <h1>Controla tu hogar,<br>ahorra con inteligencia.</h1>
+      <a href="como funciona.html" class="boton">Descubre cómo funciona</a>
+    </div>
+  </section>
+</body>
+
+<section class="noticias-ecotrack">
+  <h2>Mantente al día con EcoTrack y las últimas tendencias</h2>
+  <div class="noticias-container">
+    <div class="noticia">
+      <h3><a href="https://revistaclevel.com/top-3-aplicaciones-innovadoras-para-empezar-el-ano-2025" target="_blank">Top 3 apps innovadoras para un hogar más inteligente en 2025</a></h3>
+      <p>Descubre las aplicaciones que están marcando la pauta en la gestión inteligente del hogar, ¡algunas predicen hasta tus tareas!</p>
+    </div>
+    <div class="noticia">
+      <h3><a href="https://garza.es/blogs/noticias/las-5-tendencias-en-tecnologia-para-el-hogar-inteligente-en-2025" target="_blank">5 tendencias tecnológicas que revolucionarán tu hogar en 2025</a></h3>
+      <p>Desde la seguridad avanzada hasta la optimización energética total, mira lo que se viene en hogares inteligentes.</p>
+    </div>
+    <div class="noticia">
+      <h3><a href="https://www.infobae.com/inhouse/2025/01/29/inteligencia-artificial-y-sostenibilidad-en-el-hogar-las-tendencias-que-prometen-llegar-con-fuerza-en-2025/" target="_blank">IA y sostenibilidad: la dupla imparable en los hogares del futuro</a></h3>
+      <p>Entérate cómo la inteligencia artificial se une a la sostenibilidad para crear hogares más eficientes y conscientes.</p>
+    </div>
+    <div class="noticia">
+      <h3><a href="https://cne.gob.do/noticia/2023-un-ano-de-grandes-avances-en-eficiencia-energetica-y-sostenibilidad/" target="_blank">Grandes avances en eficiencia energética y sostenibilidad en 2023</a></h3>
+      <p>Un vistazo a los progresos que impulsan soluciones como EcoTrack hacia un futuro más verde y económico.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="footer-contenido">
+      <div class="footer-info">
+          <h3>EcoTrack</h3>
+          <p>&copy; 2025 EcoTrack. Todos los derechos reservados.</p>
+          <p>EcoTrack te ayuda a controlar y optimizar el consumo de tus recursos domésticos, ¡ahorra y vive más sostenible!</p>
+          <p class="proyecto-escolar"><i class="fas fa-graduation-cap"></i> Proyecto Escolar</p>
+      </div>
+      <div class="footer-contacto">
+          <h3>Contacto</h3>
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:contacto@ecotrack.com" class="footer-enlace">contacto@ecotrack.com</a></p>
+          <p><i class="fas fa-phone"></i> Teléfono: +1 (849) 405-8098</p>
+          <p><i class="fas fa-map-marker-alt"></i> Dirección: Barahona, República Dominicana</p>
+      </div>
+      <div class="footer-social">
+          <h3>Síguenos</h3>
+          <ul>
+              <li><a href="https://www.facebook.com/EcoTrack" class="footer-enlace" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+              <li><a href="https://twitter.com/EcoTrack" class="footer-enlace" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li><a href="https://www.instagram.com/EcoTrack" class="footer-enlace" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          </ul>
+      </div>
+      <div class="footer-legal">
+          <h3>Legal</h3>
+          <ul>
+              <li><a href="terminos.html" class="footer-enlace">Términos y Condiciones</a></li>
+              <li><a href="privacidad.html" class="footer-enlace">Política de Privacidad</a></li>
+              <li><a href="cookies.html" class="footer-enlace">Política de Cookies</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const contenido = document.querySelector('.contenido');
+  
+    // Verificar si hay IntersectionObserver
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            contenido.style.animation = 'aparecerContenido 2s ease forwards';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+  
+      observer.observe(contenido);
+    } else {
+      // Si no soporta IntersectionObserver, simplemente mostrar
+      contenido.style.opacity = 1;
+      contenido.style.transform = 'translateY(0)';
+    }
+  });
+  </script>
+  
+</html>
+

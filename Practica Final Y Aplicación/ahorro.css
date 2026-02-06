@@ -1,0 +1,630 @@
+/* Estilos generales para el cuerpo de la página de ahorro */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7fbf7; /* Un fondo muy suave */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estilos para el contenedor principal */
+.contenedor-principal-ahorro {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos para la sección de héroe */
+.hero-ahorro {
+  background-color: #e6f4e9; /* Verde claro para el fondo del héroe */
+  padding: 60px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero-contenido {
+  flex: 1;
+  padding-right: 20px;
+  text-align: left;
+}
+
+.hero-contenido h1 {
+  color: #2e8b57; /* Verde principal más intenso */
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-contenido .subtitulo {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-principal {
+  background-color: #2e8b57;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.boton-principal:hover {
+  background-color: #1e643d;
+}
+
+.boton-secundario {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.boton-secundario:hover {
+  background-color: #e0e0e0;
+}
+
+.hero-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para la sección de beneficios detallados */
+.seccion-beneficios {
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.seccion-beneficios h2 {
+  color: #388e3c; /* Otro tono de verde */
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.beneficio {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.beneficio i.icono {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #2e8b57; /* Icono verde */
+}
+
+/* Puedes añadir estilos específicos para cada icono si es necesario */
+.icono-agua { color: #6dd5ed; }
+.icono-gas { color: #ff6f61; }
+.icono-luz { color: #fdd835; }
+.icono-grafico { color: #4dabf5; }
+.icono-planeta { color: #81c784; }
+.icono-facil { color: #fbc02d; }
+
+.beneficio h3 {
+  color: #43a047; /* Otro tono de verde */
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.beneficio p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.beneficio ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #777;
+}
+
+.beneficio ul li {
+  margin-bottom: 5px;
+}
+
+/* Estilos para la sección de llamada a la acción */
+.seccion-llamada-accion {
+  background-color: #f0f8f4; /* Otro tono suave de verde */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.seccion-llamada-accion h2 {
+  color: #2e8b57;
+  font-size: 2.4em;
+  margin-bottom: 20px;
+}
+
+.seccion-llamada-accion p {
+  color: #555;
+  font-size: 1.15em;
+  margin-bottom: 30px;
+}
+
+.seccion-llamada-accion .boton-principal.grande {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  margin-right: 15px;
+}
+
+/* Estilos para el pie de página (si no están en pie.css) */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info p {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.footer-enlaces a {
+  color: #eee;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+  color: #81c784; /* Un verde más claro para el hover */
+}
+
+/* Adaptaciones para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .hero-ahorro {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-contenido {
+      padding-right: 0;
+      margin-bottom: 30px;
+  }
+
+  .hero-contenido h1 {
+      font-size: 2.2em;
+  }
+
+  .hero-contenido .subtitulo {
+      font-size: 1.1em;
+  }
+
+  .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .cta-buttons a {
+      margin: 10px 0;
+      width: 80%;
+      text-align: center;
+  }
+
+  .beneficios-grid {
+      grid-template-columns: 1fr;
+  }
+}
+/* Estilos generales para el cuerpo de la página de ahorro */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7fbf7; /* Un fondo muy suave */
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden; /* Para evitar barras de desplazamiento horizontales innecesarias */
+}
+
+/* Estilos para el contenedor principal */
+.contenedor-principal-ahorro {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Animación de entrada desde la izquierda */
+@keyframes entradaIzquierda {
+  from {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Animación de flotación suave */
+@keyframes flotar {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Animación de escala para botones */
+@keyframes escalaBoton {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Estilos para la sección de héroe */
+.hero-ahorro {
+  background-color: #e6f4e9; /* Verde claro para el fondo del héroe */
+  padding: 60px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  animation: entradaIzquierda 0.8s ease-out;
+}
+
+.hero-contenido {
+  flex: 1;
+  padding-right: 20px;
+  text-align: left;
+}
+
+.hero-contenido h1 {
+  color: #2e8b57; /* Verde principal más intenso */
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-contenido .subtitulo {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-principal {
+  background-color: #2e8b57;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.boton-principal:hover {
+  background-color: #1e643d;
+  transform: translateY(-2px);
+}
+
+.boton-secundario {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.boton-secundario:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.hero-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-imagen img {
+  max-width: 100%;
+  height: auto;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+/* Estilos para la sección de beneficios detallados */
+.seccion-beneficios {
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.seccion-beneficios h2 {
+  color: #388e3c; /* Otro tono de verde */
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.beneficio {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.beneficio:hover {
+  transform: translateY(-5px);
+}
+
+.beneficio i.icono {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #2e8b57; /* Icono verde */
+  transition: transform 0.3s ease-in-out;
+}
+
+.beneficio:hover i.icono {
+  transform: scale(1.1);
+}
+
+/* Puedes añadir estilos específicos para cada icono si es necesario */
+.icono-agua { color: #6dd5ed; }
+.icono-gas { color: #ff6f61; }
+.icono-luz { color: #fdd835; }
+.icono-grafico { color: #4dabf5; }
+.icono-planeta { color: #81c784; }
+.icono-facil { color: #fbc02d; }
+
+.beneficio h3 {
+  color: #43a047; /* Otro tono de verde */
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.beneficio p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.beneficio ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #777;
+}
+
+.beneficio ul li {
+  margin-bottom: 5px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.beneficio:hover ul li {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(0.05s * var(--index)); /* Para una animación escalonada */
+}
+
+/* Estilos para el botón "Ver más" */
+.boton-detalle {
+  background-color: #81c784; /* Un tono de verde más claro */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+  font-size: 0.95em;
+}
+
+.boton-detalle:hover {
+  background-color: #66a76a;
+  transform: translateY(-2px);
+}
+
+/* Estilos para los detalles ocultos */
+.detalles-ocultos {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 0.9em;
+  color: #555;
+  display: none; /* Inicialmente ocultos */
+}
+
+.detalles-ocultos.mostrar-detalles {
+  display: block; /* Se muestran al hacer clic */
+  animation: slideDown 0.3s ease-out;
+}
+
+
+/* Estilos para la sección de llamada a la acción */
+.seccion-llamada-accion {
+  background-color: #f0f8f4; /* Otro tono suave de verde */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  animation: entradaIzquierda 0.8s ease-out;
+}
+
+.seccion-llamada-accion h2 {
+  color: #2e8b57;
+  font-size: 2.4em;
+  margin-bottom: 20px;
+}
+
+.seccion-llamada-accion p {
+  color: #555;
+  font-size: 1.15em;
+  margin-bottom: 30px;
+}
+
+.seccion-llamada-accion .boton-principal.grande {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  margin-right: 15px;
+  animation: escalaBoton 2s infinite alternate;
+}
+
+.seccion-llamada-accion .boton-secundario.grande {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  animation: escalaBoton 2s infinite alternate-reverse;
+}
+
+
+
+/* Adaptaciones para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .hero-ahorro {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-contenido {
+      padding-right: 0;
+      margin-bottom: 30px;
+  }
+
+  .hero-contenido h1 {
+      font-size: 2.2em;
+  }
+
+  .hero-contenido .subtitulo {
+      font-size: 1.1em;
+  }
+
+  .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .cta-buttons a {
+      margin: 10px 0;
+      width: 80%;
+      text-align: center;
+  }
+
+  .beneficios-grid {
+      grid-template-columns: 1fr;
+  }
+}
+/* ... otros estilos ... */
+
+/* Estilos para los nuevos botones de enlace en la sección de héroe */
+.cta-buttons-enlace {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  align-items: center; /* Alinea verticalmente los botones */
+}
+
+.boton-enlace {
+  display: inline-flex; /* Para alinear icono y texto */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boton-enlace.sostenibilidad {
+  background-color: #81c784; /* Verde suave para sostenibilidad */
+  color: #fff;
+}
+
+.boton-enlace.comodidad {
+  background-color: #64b5f6; /* Azul suave para comodidad */
+  color: #fff;
+}
+
+.boton-enlace.efecto-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.boton-enlace i {
+  font-size: 1.3em; /* Tamaño de los iconos */
+}
+
+/* Estilos específicos para los iconos (puedes ajustarlos) */
+.icono-sostenibilidad::before {
+  content: ""; /* Emoji de brote */
+}
+
+.icono-comodidad::before {
+  content: ""; /* Emoji de sofá */
+}
+
+/* ... el resto de tus estilos ... */
+
+
+
+
+
+
+
+
+
+
+
+
+

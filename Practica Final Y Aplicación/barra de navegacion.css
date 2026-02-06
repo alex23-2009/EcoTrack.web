@@ -1,0 +1,269 @@
+/* --- Estilos generales de la barra --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #000000c5;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* --- Menú principal --- */
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.menu > li {
+  position: relative;
+}
+
+nav ul.menu > li > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  display: block;
+  transition: background-color 0.3s;
+  font-family: inherit;
+}
+
+nav ul.menu > li > a:hover,
+nav ul.menu > li > a.activo {
+  background-color: #00695d00;
+  border-radius: 8px;
+  color: #d1f5f0;
+}
+
+/* --- Submenús --- */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #000000b0;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.submenu li {
+  width: 100%;
+}
+
+.submenu li a {
+  padding: 0.6rem 1rem;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: inherit;
+}
+
+.submenu li a:hover {
+  background-color: #22272633;
+  border-radius: 0;
+}
+
+/* Mostrar submenú al pasar el mouse */
+nav ul.menu > li:hover .submenu {
+  display: block;
+}
+
+/* --- Responsive (opcional si lo vas a adaptar a móvil después) --- */
+@media (max-width: 768px) {
+  nav ul.menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul.menu > li {
+    width: 100%;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+/* --- Estilos generales de la barra --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #000000c5;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out; /* Transición suave para la barra */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Logo de la barra */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* --- Menú principal --- */
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.menu > li {
+  position: relative;
+}
+
+nav ul.menu > li > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  display: block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: inherit;
+}
+
+/* Efecto hover en los enlaces */
+nav ul.menu > li > a:hover,
+nav ul.menu > li > a.activo {
+  background-color: #00695d00;
+  border-radius: 8px;
+  color: #d1f5f0;
+  transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* --- Submenús --- */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #000000b0;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.submenu li {
+  width: 100%;
+}
+
+.submenu li a {
+  padding: 0.6rem 1rem;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+/* Efecto hover en los submenús */
+.submenu li a:hover {
+  background-color: #22272633;
+  border-radius: 0;
+}
+
+/* Mostrar submenú al pasar el mouse */
+nav ul.menu > li:hover .submenu {
+  display: block;
+  animation: submenuFadeIn 0.3s ease-in-out; /* Animación para mostrar el submenú */
+}
+
+/* Animación para el submenú */
+@keyframes submenuFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Efectos de la barra en el scroll --- */
+@keyframes navbarScroll {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.navbar.hidden {
+  animation: navbarScroll 0.3s ease-in-out forwards; /* Desaparece la barra cuando el scroll baja */
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  nav ul.menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul.menu > li {
+    width: 100%;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
